@@ -50,10 +50,10 @@ def main():
         for i in range(1, n + 1):
             if idx + 2 >= len(elements):
                 raise ValueError("Неповні дані для вершин графа")
-            node_id = int(elements[idx])  # унікальний ідентифікатор вершини
-            c_type = elements[idx + 1]  # тип запису N або D
-            v = int(elements[idx + 2])  # власне значення запису
-            idx += 3  # переміщяємо показник на три позиції вперед для наступної вершини
+            node_id = int(elements[idx])#унікальний ідентифікатор вершини
+            c_type = elements[idx + 1]#тип запису N або D
+            v = int(elements[idx + 2])#власне значення запису
+            idx += 3#переміщяємо показник на три позиції вперед для наступної вершини
 
             #перевірка коректності порядку id, типу запису та діапазону значення v
             if node_id != i:
@@ -91,7 +91,7 @@ def main():
         for vertex in graph.vertices.values():
             vertex.neighbors.sort(key=lambda x: x.id)
 
-        t = int(elements[idx]) if idx < len(elements) else 0  # порогове значення t в кінці
+        t = int(elements[idx]) if idx < len(elements) else 0#порогове значення t в кінці
 
         #перевірка діапазону для порогового значення t
         if not (0 <= t <= 200000):
